@@ -1,0 +1,140 @@
+baseURL = "https://scanteroch.github.io/"
+title = "Sergio Cantero Chinchilla"
+language = "en-gb"
+paginate = 10
+description = "Personal webpage of Sergio Cantero Chinchilla"
+theme = "PaperMod"
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+pygmentsUseClasses = true
+
+[minify]
+disableXML = true
+
+[languages.en]
+languageName = "English"
+weight = 1
+
+  [languages.en.taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[[languages.en.menu.main]]
+name = "About"
+url = "/about/"
+weight = 1
+
+[[languages.en.menu.main]]
+name = "Research"
+url = "research/"
+weight = 2
+
+[[languages.en.menu.main]]
+name = "People"
+url = "people/"
+weight = 3
+
+[[languages.en.menu.main]]
+name = "Collaborators"
+url = "collaborators/"
+weight = 4
+
+[[languages.en.menu.main]]
+name = "Jobs & Opportunities"
+url = "jobs/"
+weight = 5
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[params]
+env = "production"
+description = "Personal and professional website"
+author = "Sergio Cantero Chinchilla"
+defaultTheme = "auto"
+ShowShareButtons = true
+ShowReadingTime = true
+displayFullLangName = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = true
+ShowToc = true
+images = [ "papermod-cover.png" ]
+
+  [params.profileMode]
+  enabled = true
+  title = "Sergio Cantero Chinchilla"
+  subtitle = """
+**_Lecturer in Digital and Data-driven Engineering_**\\
+School of Electrical, Electronic and Mechanical Engineering\\
+University of Bristol\
+"""
+  imageUrl = "/about/Portrait_Sergio2.jpg"
+  imageTitle = "Portrait of Sergio Cantero Chinchilla"
+  imageWidth = 215
+  imageHeight = 165
+
+  [[params.socialIcons]]
+  name = "email"
+  url = "mailto:sergio.canterochinchilla@bristol.ac.uk"
+
+  [[params.socialIcons]]
+  name = "googlescholar"
+  url = "https://scholar.google.com/citations?user=UzQ8jtwAAAAJ&hl=en"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/scanteroch"
+
+  [[params.socialIcons]]
+  name = "researchgate"
+  url = "https://www.researchgate.net/profile/Sergio-Cantero-Chinchilla"
+
+  [params.homeInfoParams]
+  Title = "Sergio Cantero Chinchilla"
+  Content = """
+<p style="text-align: center;">Lecturer in Digital and Data-driven Engineering</p> <p style="text-align: center;">University of Bristol</p> <p style="text-align: center;">University of Bristol</p>
+"""
+
+  [params.editPost]
+  URL = "https://github.com/scanteroch/scanteroch.github.io/scanteroch/content"
+  Text = "Suggest Changes"
+  appendFilePath = true
+
+  [params.assets]
+  disableHLJS = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+noClasses = false
+
+[privacy.vimeo]
+disabled = false
+simple = true
+
+[privacy.twitter]
+disabled = false
+enableDNT = true
+simple = true
+
+[privacy.instagram]
+disabled = false
+simple = true
+
+[privacy.youtube]
+disabled = false
+privacyEnhanced = true
+
+[services.instagram]
+disableInlineCSS = true
+
+[services.twitter]
+disableInlineCSS = true

@@ -1,0 +1,177 @@
+baseURL: "https://scanteroch.github.io/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+title: Sergio Cantero Chinchilla
+language: en-gb
+paginate: 5
+description: "Personal webpage of Sergio Cantero Chinchilla"
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+# googleAnalytics: UA-123-45
+
+minify:
+    disableXML: true
+    # minifyOutput: true
+
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
+        menu:
+            main:
+                - name: About
+                  url: about
+                  weight: 10
+                - name: Research
+                  url: research/
+                  weight: 10
+                - name: Publications
+                  url: publications/
+                  weight: 10
+                - name: Collaborators
+                  url: collaborators/
+                  weight: 10
+                - name: Jobs & Opportunities
+                  url: jobs/
+                  weight: 10
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    description: "Personal and professional website"
+    author: Sergio Cantero Chinchilla
+    # author: ["Me", "You"] # multiple authors
+
+    defaultTheme: auto
+    # disableThemeToggle: true
+    ShowShareButtons: true
+    ShowReadingTime: true
+    # disableSpecial1stPost: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: true
+    ShowToc: true
+    # comments: false
+    images: ["papermod-cover.png"]
+
+    profileMode:
+        enabled: true
+        title: Sergio Cantero Chinchilla
+        subtitle: >
+          **_Lecturer in Digital and Data-driven Engineering_**\
+
+          School of Electrical, Electronic and Mechanical Engineering\
+
+          University of Bristol\
+
+        imageUrl: about/Portrait_Sergio2.jpg
+        imageTitle: Portrait of Sergio Cantero Chinchilla
+        imageWidth: 150
+        imageHeight: 160
+
+    socialIcons:
+      - name: email
+        url: 'mailto:barton@cityinthesky.co.uk'
+      - name: github
+        url: 'https://github.com/dawbarton/'
+      - name: twitter
+        url: 'https://twitter.com/davidawbarton/'
+      - name: linkedin
+        url: 'https://www.linkedin.com/in/david-barton-61822443/'
+
+    homeInfoParams:
+        Title: "Sergio Cantero Chinchilla"
+        Content: >
+            <p style="text-align: center;">Lecturer in Digital and Data-driven Engineering</p>
+            <p style="text-align: center;">University of Bristol</p>
+            <p style="text-align: center;">University of Bristol</p>
+
+
+    editPost:
+        URL: "https://github.com/scanteroch/scanteroch.github.io/scanteroch/content"
+        Text: "Suggest Changes" # edit text
+        appendFilePath: true # to append file path to Edit link
+
+    # label:
+    #     text: "Home"
+    #     icon: icon.png
+    #     iconHeight: 35
+
+    # analytics:
+    #     google:
+    #         SiteVerificationTag: "XYZabc"
+
+    assets:
+        disableHLJS: true
+    #     favicon: "<link / abs url>"
+    #     favicon16x16: "<link / abs url>"
+    #     favicon32x32: "<link / abs url>"
+    #     apple_touch_icon: "<link / abs url>"
+    #     safari_pinned_tab: "<link / abs url>"
+
+    # cover:
+    #     hidden: true # hide everywhere but not in structured data
+    #     hiddenInList: true # hide on list pages and home
+    #     hiddenInSingle: true # hide on single page
+
+    # fuseOpts:
+    #     isCaseSensitive: false
+    #     shouldSort: true
+    #     location: 0
+    #     distance: 1000
+    #     threshold: 0.4
+    #     minMatchCharLength: 0
+    #     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    #     keys: ["title", "permalink", "summary", "content"]
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        noClasses: false
+        # anchorLineNos: true
+        # codeFences: true
+        # guessSyntax: true
+        # lineNos: true
+        # style: monokai
+
+privacy:
+    vimeo:
+        disabled: false
+        simple: true
+
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
+
+    instagram:
+        disabled: false
+        simple: true
+
+    youtube:
+        disabled: false
+        privacyEnhanced: true
+
+services:
+    instagram:
+        disableInlineCSS: true
+    twitter:
+        disableInlineCSS: true
