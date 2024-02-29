@@ -6,7 +6,7 @@ weight = 1
 # Introduction
 Deep learning methods can be highly accurate and efficient, but that comes at a cost. Typically, the generalisability of the methods is compromised outside the range of parameters in which they have been trained on. As an example of this, if a network is trained to predict thickness values between 7mm and 12mm, outside of this range the network output is not necessarily very accurate.
 
-<img src="media/Portrait_Sergio2.jpg" alt="Schematic of epistemic uncertainty" style="width:500px;"/>
+<img src="media/UQ_fig.jpg" alt="Schematic of epistemic uncertainty" style="width:500px;"/>
 
 Uncertainty quantification methods in deep learning helps:
 
