@@ -3,10 +3,10 @@ title = 'Uncertainty quantification in deep learning methods'
 weight = 1
 +++
 
-# Introduction 
-Deep learning methods can be highly accurate and efficient, but that comes at a cost. Typically, the generalisability of the methods is compromised outside the range of parameters in which they have been trained on. As an example of this, if a network is trained to predict thickness values between 7mm and 12mm, outside of this range the network output is not necessarily very accurate. 
+# Introduction
+Deep learning methods can be highly accurate and efficient, but that comes at a cost. Typically, the generalisability of the methods is compromised outside the range of parameters in which they have been trained on. As an example of this, if a network is trained to predict thickness values between 7mm and 12mm, outside of this range the network output is not necessarily very accurate.
 
-![](media/UQ_fig.jpg)
+<img src="media/Portrait_Sergio2.jpg" alt="Schematic of epistemic uncertainty" style="width:500px;"/>
 
 Uncertainty quantification methods in deep learning helps:
 
@@ -23,4 +23,3 @@ In the area of Non-Destructive Evaluation (NDE), inspection qualification requir
 The work carried out in this area is nowadays focused on rigorously characterising the uncertainty related to the deep learning model (AKA *epistemic* uncertainty). This is being done through deep ensembles as it is the most rigorous technique to estimate epistemic uncertainty. Next steps will involve the comparison with other, more efficient, techniques for uncertainty quantification such as Flipout, Bayesian networks, among others.
 
 This work is being partially funded by the UK Research Centre for Non-Destructive Evaluation.
-
