@@ -57,7 +57,7 @@ env = "production"
 description = "Personal and professional website"
 author = "Sergio Cantero Chinchilla"
 defaultTheme = "auto"
-ShowShareButtons = true
+ShowShareButtons = false
 ShowReadingTime = true
 displayFullLangName = true
 ShowPostNavLinks = true
@@ -77,8 +77,8 @@ University of Bristol\
 """
   imageUrl = "/about/Portrait_Sergio2.jpg"
   imageTitle = "Portrait of Sergio Cantero Chinchilla"
-  imageWidth = 215
-  imageHeight = 165
+  imageWidth = 250
+  imageHeight = 194
 
   [[params.socialIcons]]
   name = "email"

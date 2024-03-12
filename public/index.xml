@@ -2,77 +2,88 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Sergio Cantero Chinchilla</title>
-    <link>https://scanteroch.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Sergio Cantero Chinchilla</description>
     <image>
       <title>Sergio Cantero Chinchilla</title>
-      <url>https://scanteroch.github.io/papermod-cover.png</url>
-      <link>https://scanteroch.github.io/papermod-cover.png</link>
+      <url>http://localhost:1313/papermod-cover.png</url>
+      <link>http://localhost:1313/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://scanteroch.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Dec 2023 16:47:24 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Uncertainty quantification in deep learning methods</title>
-      <link>https://scanteroch.github.io/research/uq_dl/</link>
+      <link>http://localhost:1313/research/uq_dl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://scanteroch.github.io/research/uq_dl/</guid>
-      <description>This is&amp;hellip;</description>
+      <guid>http://localhost:1313/research/uq_dl/</guid>
+      <description>Introduction Deep learning methods can be highly accurate and efficient, but that comes at a cost. Typically, the generalisability of the methods is compromised outside the range of parameters in which they have been trained on. As an example of this, if a network is trained to predict thickness values between 7mm and 12mm, outside of this range the network output is not necessarily very accurate.
+Uncertainty quantification methods in deep learning helps:</description>
     </item>
     
     <item>
       <title>Data Science for NDE</title>
-      <link>https://scanteroch.github.io/research/ds_nde/</link>
+      <link>http://localhost:1313/research/ds_nde/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://scanteroch.github.io/research/ds_nde/</guid>
+      <guid>http://localhost:1313/research/ds_nde/</guid>
       <description>This is&amp;hellip;</description>
     </item>
     
     <item>
       <title>Adaptive Laser-Induced Phased Array inspections</title>
-      <link>https://scanteroch.github.io/research/alipa/</link>
+      <link>http://localhost:1313/research/alipa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://scanteroch.github.io/research/alipa/</guid>
+      <guid>http://localhost:1313/research/alipa/</guid>
       <description>This is&amp;hellip;</description>
     </item>
     
     <item>
       <title>Optimal sensor placement</title>
-      <link>https://scanteroch.github.io/research/osp/</link>
+      <link>http://localhost:1313/research/osp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://scanteroch.github.io/research/osp/</guid>
+      <guid>http://localhost:1313/research/osp/</guid>
       <description>This is&amp;hellip;</description>
     </item>
     
     <item>
       <title>Probabilistic SHM</title>
-      <link>https://scanteroch.github.io/research/uq_shm/</link>
+      <link>http://localhost:1313/research/uq_shm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://scanteroch.github.io/research/uq_shm/</guid>
+      <guid>http://localhost:1313/research/uq_shm/</guid>
       <description>This is&amp;hellip;</description>
     </item>
     
     <item>
+      <title>Example</title>
+      <link>http://localhost:1313/posts/example/</link>
+      <pubDate>Thu, 14 Dec 2023 16:47:24 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/example/</guid>
+      <description>Hello world. This is an example. However this should appear differently. The way in which we write is quite easy.</description>
+    </item>
+    
+    <item>
       <title>About Me</title>
-      <link>https://scanteroch.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://scanteroch.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>I am a Lecturer in Digital and Data-Driven Engineering of the School of Electrical, Electronic, and Mechanical Engineering of the University of Bristol, UK. Research-wise, I am based in the Ultrasonic and Non-destructive Testing (UNDT) group of the University of Bristol. My research interests include:
 Deep learning Uncertainty quantification Non-Destructive Evaluation and Structural Health Monitoring Optimal sensor placement I am active in these research areas and you can see the main developments in the research pages.</description>
     </item>
     
     <item>
       <title>People</title>
-      <link>https://scanteroch.github.io/people/</link>
+      <link>http://localhost:1313/people/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://scanteroch.github.io/people/</guid>
-      <description>PhD Students Explainability of deep learning methods applied to NDE (FIND-CDT) Yuyang Liu (Eric) (2023-Present) Machine learning-assisted Bioprinting Platform for Bone Scaffolds Fabrication Rixiang Quan (2021-Present) Research Associates Deep learning uncertainty quantification &amp; laser ultrasound (RCNDE &amp; EPSRC) Mohammad Ali Fakih (2023-Present) </description>
+      <guid>http://localhost:1313/people/</guid>
+      <description>PhD Students Explainability of deep learning methods applied to NDE (FIND-CDT) Yuyang Liu (Eric) (2023-Present) Machine Learning-assisted Bioprinting Platform for Bone Scaffolds Fabrication Rixiang Quan (2021-Present) Research Associates Deep learning uncertainty quantification &amp; laser ultrasound (RCNDE &amp; EPSRC) Mohammad Ali Fakih (2023-Present) </description>
     </item>
     
   </channel>
