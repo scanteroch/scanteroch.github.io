@@ -1,6 +1,6 @@
 +++
 title = 'Uncertainty quantification in deep learning methods'
-weight = 1
+weight = 2
 +++
 
 # Introduction
@@ -8,7 +8,7 @@ Deep learning methods can be highly accurate and efficient, but that comes at a 
 
 <img src="../media/UQ_fig.jpg" alt="Schematic of epistemic uncertainty" style="width:500px;"/>
 
-Uncertainty quantification methods in deep learning helps:
+Uncertainty quantification methods in deep learning help:
 
 * Identifying when the model is working outside the predefined domain of operation;
 * Improving robustness of predictions on average;

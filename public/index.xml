@@ -13,16 +13,6 @@
     <language>en</language>
     <lastBuildDate>Thu, 14 Dec 2023 16:47:24 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Uncertainty quantification in deep learning methods</title>
-      <link>http://localhost:1313/research/uq_dl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/research/uq_dl/</guid>
-      <description>Introduction Deep learning methods can be highly accurate and efficient, but that comes at a cost. Typically, the generalisability of the methods is compromised outside the range of parameters in which they have been trained on. As an example of this, if a network is trained to predict thickness values between 7mm and 12mm, outside of this range the network output is not necessarily very accurate.
-Uncertainty quantification methods in deep learning helps:</description>
-    </item>
-    
-    <item>
       <title>Data Science for NDE</title>
       <link>http://localhost:1313/research/ds_nde/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -33,21 +23,22 @@ Automation levels for ultrasonic NDE [1].</description>
     </item>
     
     <item>
+      <title>Uncertainty quantification in deep learning methods</title>
+      <link>http://localhost:1313/research/uq_dl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/research/uq_dl/</guid>
+      <description>Introduction Deep learning methods can be highly accurate and efficient, but that comes at a cost. Typically, the generalisability of the methods is compromised outside the range of parameters in which they have been trained on. As an example of this, if a network is trained to predict thickness values between 7mm and 12mm, outside of this range the network output is not necessarily very accurate.
+Uncertainty quantification methods in deep learning help:</description>
+    </item>
+    
+    <item>
       <title>Adaptive Laser-Induced Phased Array inspections</title>
       <link>http://localhost:1313/research/alipa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/research/alipa/</guid>
-      <description>This is&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Optimal sensor placement</title>
-      <link>http://localhost:1313/research/osp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/research/osp/</guid>
-      <description>This is&amp;hellip;</description>
+      <description>Introduction Ultrasonic array inspections are usually impractical in highly hazardous environments where a trained operator cannot access physically to ensure good coupling and data are being acquired. Similarly, classical arrays need to find alternative coupling approaches when the geometry of the inspected specimen is irregular. Laser-induced phased-arrays (LIPAs) overcome these issues as it is a non-contact NDT technique that enable ultrasonic imaging in a similar fashion as classical phased-arrays [1].</description>
     </item>
     
     <item>
@@ -56,7 +47,16 @@ Automation levels for ultrasonic NDE [1].</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/research/uq_shm/</guid>
-      <description>This is&amp;hellip;</description>
+      <description>Under construction&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Optimal sensor placement</title>
+      <link>http://localhost:1313/research/osp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/research/osp/</guid>
+      <description>Introduction This research line focuses on the optimisation of sensor location for a given objective, which might be defect detection, damage localisation, or characterisation. In particular, I am interested in incorporating uncertainty quantification along the way to obtain the most robust locations that can manage some level of noise. This problem not only need to provide the most informative locations but also the optimal number of sensors, which introduces an economic problem such that when adding more sensors, more hardware, software and data management costs are added.</description>
     </item>
     
     <item>

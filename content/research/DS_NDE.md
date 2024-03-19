@@ -1,6 +1,6 @@
 +++
 title = 'Data Science for NDE'
-weight = 2
+weight = 1
 +++
 
 # Introduction
@@ -49,6 +49,6 @@ The work in this area is nowadays focused on **explanability** and how that can 
 # References
 1. Cantero-Chinchilla, S., Wilcox, P.D. and Croxford, A.J., 2022. Deep learning in automated ultrasonic NDE–developments, axioms and opportunities. *NDT & E International*, 131, p.102703.
 2. Cantero-Chinchilla, S., Wilcox, P.D. and Croxford, A.J., 2022. A deep learning based methodology for artefact identification and suppression with application to ultrasonic images. *NDT & E International*, 126, p.102575.
-3. Cantero-Chinchilla, S., Croxford, A.J. and Wilcox, P.D., 2023. A data-driven approach to suppress artefacts using PCA and autoencoders. NDT & E International, 139, p.102904.
+3. Cantero-Chinchilla, S., Croxford, A.J. and Wilcox, P.D., 2023. A data-driven approach to suppress artefacts using PCA and autoencoders. *NDT & E International*, 139, p.102904.
 4. Pyle, R.J., Bevan, R.L., Hughes, R.R., Rachev, R.K., Ali, A.A.S. and Wilcox, P.D., 2020. Deep learning for ultrasonic crack characterization in NDE. *IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control*, 68(5), pp.1854-1865.
 5. Cantero-Chinchilla, S., Simpson, C.A., Ballisat, A., Croxford, A.J. and Wilcox, P.D., 2023. Convolutional neural networks for ultrasound corrosion profile time series regression. *NDT & E International*, 133, p.102756.
