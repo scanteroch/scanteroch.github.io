@@ -10,8 +10,7 @@
       <link>http://localhost:1313/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 14 Dec 2023 16:47:24 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Science for NDE</title>
       <link>http://localhost:1313/research/ds_nde/</link>
@@ -60,15 +59,6 @@ Uncertainty quantification methods in deep learning help:</description>
     </item>
     
     <item>
-      <title>Example</title>
-      <link>http://localhost:1313/posts/example/</link>
-      <pubDate>Thu, 14 Dec 2023 16:47:24 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/example/</guid>
-      <description>Hello world. This is an example. However this should appear differently. The way in which we write is quite easy.</description>
-    </item>
-    
-    <item>
       <title>About Me</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -76,6 +66,25 @@ Uncertainty quantification methods in deep learning help:</description>
       <guid>http://localhost:1313/about/</guid>
       <description>I am a Lecturer in Digital and Data-Driven Engineering of the School of Electrical, Electronic, and Mechanical Engineering of the University of Bristol, UK. Research-wise, I am based in the Ultrasonic and Non-destructive Testing (UNDT) group of the University of Bristol. My research interests include:
 Deep learning Uncertainty quantification Non-Destructive Evaluation and Structural Health Monitoring Optimal sensor placement I am active in these research areas and you can see the main developments in the research pages.</description>
+    </item>
+    
+    <item>
+      <title>Collaborators</title>
+      <link>http://localhost:1313/collaborators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/collaborators/</guid>
+      <description>Under construction&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Job opportunities</title>
+      <link>http://localhost:1313/jobs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/jobs/</guid>
+      <description>Under construction&amp;hellip;
+Postdoctoral positions PhD projects Optimising the frequency of NDE for integrity assessment. More info to apply here or here Design for inspectability in metal Additive Manufacturing. More info here </description>
     </item>
     
     <item>
