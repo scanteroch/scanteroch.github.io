@@ -39,7 +39,7 @@ The multilevel Bayesian approach for inverse problems is a very powerful techniq
 
 # Research work
 
-The work in this area is nowadays driven by the integration of neural networks in the inverse problem - e.g. surrogate models of the physics models and surrogating the entire inversion process. Currently I am open to the development of any Bayesian methods that advance the state of the art through the use of scientific machine learning, surrogate models and neural networks. In addition, I am also currently working on extending the characterisation stage to the prognostics one, whereby the end-of-life of a structure can be predicted using degradation models. If you want to collaborate in any of these areas, do not hesitate to contact me.
+The work I am leading in this area is nowadays driven by the integration of neural networks in the inverse problem - e.g. surrogate models of the physics models and surrogating the entire inversion process. Currently I am open to the development of any Bayesian methods that advance the state of the art through the use of scientific machine learning, surrogate models and neural networks. In addition, I am also currently working on extending the characterisation stage to the prognostics one, whereby the end-of-life of a structure can be predicted using degradation models. If you want to collaborate in any of these areas, do not hesitate to contact me.
 
 # References
 1. Cantero-Chinchilla, S., Aranguren, G., Royo, J.M., Chiachío, M., Etxaniz, J. and Calvo-Echenique, A., 2021. Structural health monitoring using ultrasonic guided-waves and the degree of health index. *Sensors*, 21(3), p.993.
