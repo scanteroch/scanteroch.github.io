@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Data Science for NDE | Sergio Cantero Chinchilla</title>
+<meta name="keywords" content="">
+<meta name="description" content="Introduction Automation of non-destructive evaluation (NDE) processes has typically relied on rudimentary tools that support a trained operator manually interpreting data. The abundance of data and implementation of Internet of Things and Industry 4.0 provide a new exciting opportunity to extract more accurate information in a more efficient manner - hence, enabling automation. A general framework for the automation in ultrasonic NDE enabled by deep learning is provided below.
+Automation levels for ultrasonic NDE [1].">
+<meta name="author" content="Sergio Cantero Chinchilla">
+<link rel="canonical" href="https://scanteroch.github.io/research/ds_nde/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4485b763977cc3e4662eef6f989e7545db37d8db129ceec3fad44406a8b41456.css" integrity="sha256-RIW3Y5d8w&#43;RmLu9vmJ51Rds32NsSnO7D&#43;tREBqi0FFY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://scanteroch.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://scanteroch.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://scanteroch.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://scanteroch.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://scanteroch.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://scanteroch.github.io/research/ds_nde/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Data Science for NDE" />
+<meta property="og:description" content="Introduction Automation of non-destructive evaluation (NDE) processes has typically relied on rudimentary tools that support a trained operator manually interpreting data. The abundance of data and implementation of Internet of Things and Industry 4.0 provide a new exciting opportunity to extract more accurate information in a more efficient manner - hence, enabling automation. A general framework for the automation in ultrasonic NDE enabled by deep learning is provided below.
+Automation levels for ultrasonic NDE [1]." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://scanteroch.github.io/research/ds_nde/" /><meta property="og:image" content="https://scanteroch.github.io/papermod-cover.png"/><meta property="article:section" content="research" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://scanteroch.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="Data Science for NDE"/>
+<meta name="twitter:description" content="Introduction Automation of non-destructive evaluation (NDE) processes has typically relied on rudimentary tools that support a trained operator manually interpreting data. The abundance of data and implementation of Internet of Things and Industry 4.0 provide a new exciting opportunity to extract more accurate information in a more efficient manner - hence, enabling automation. A general framework for the automation in ultrasonic NDE enabled by deep learning is provided below.
+Automation levels for ultrasonic NDE [1]."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Data-Driven Engineering lab - Research",
+      "item": "https://scanteroch.github.io/research/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Data Science for NDE",
+      "item": "https://scanteroch.github.io/research/ds_nde/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Data Science for NDE",
+  "name": "Data Science for NDE",
+  "description": "Introduction Automation of non-destructive evaluation (NDE) processes has typically relied on rudimentary tools that support a trained operator manually interpreting data. The abundance of data and implementation of Internet of Things and Industry 4.0 provide a new exciting opportunity to extract more accurate information in a more efficient manner - hence, enabling automation. A general framework for the automation in ultrasonic NDE enabled by deep learning is provided below.\nAutomation levels for ultrasonic NDE [1].",
+  "keywords": [
+    
+  ],
+  "articleBody": "Introduction Automation of non-destructive evaluation (NDE) processes has typically relied on rudimentary tools that support a trained operator manually interpreting data. The abundance of data and implementation of Internet of Things and Industry 4.0 provide a new exciting opportunity to extract more accurate information in a more efficient manner - hence, enabling automation. A general framework for the automation in ultrasonic NDE enabled by deep learning is provided below.\nAutomation levels for ultrasonic NDE [1].\rThis research line explores data science and artificial intelligence/machine learning techniques for the automation of NDE processes, including data pre-processing, defect detection, and defect or material characterisation.\nData pre-processing NDE data are typically noisy and contain elements that may obscure defective information. In the case of ultrasonic NDE, this can be realised in the form of artefacts - benign feature that appear in images (ultrasonic imaging) potentially obscuring defects. I have addressed this problem from a data-driven perspective, i.e. using datasets to build a model that can suppress the artefacts, ideally in the time-domain, before going to the image domain (as in the latter, preserving information from a pixel area is much more difficult).\nTo tackle this issue, I have proposed two methods [2,3] based on the concepts of autoencoders and PCA, which use either numerical or experimental data in order to learn the artefact representation in the time domain and suppress them. In [2], the suppression was addressed by blanking out some parts of the ultrasonic signals, while in [3] a subtraction was proposed. The benefit of [2] is an enhanced removal of artefacts but at the cost of removing defect-related energy and distorting the spread function. In [3], these limitations where addressed, showing a more realistic spread function of the defects while having a very limited impact in the level of artefact suppression.\nArtefact suppression example (Figure taken from [3]). First column is the raw image without suppression, second column is the PCA-AE from [3] compared against the GB-AE autoencoder in [2] and the original defect.\rThe overall limitations rely on the simplistic inspection configuration considering flat specimens and artefacts stemming from back- and front-walls. These are aspects that are considered to have an implication in the design of the data-driven models, and that are under research consideration.\nDefect detection This NDE stage involves the binary classification of a set of data in either defective or pristine material. In ultrasonic imaging, this is typically done by setting a threshold value (based on defect-free data) and identifying any amplitude above the threshold. The approaches from data pre-processing can be seen as an attempt to improve the performance of classical detectors.\nDeep learning offers the possibility to detect defects from images by visually inspecting an image and tracing boxes whereby a defect is believed to be seen (e.g. through CNNs). Binary classifiers can also be created to provide information about the defect information in a piece of NDE data. However, the main issue with these approaches is the reliance on defect data, which are usually scarce in nature in NDE. Alternatives could include unsupervised approaches for anomaly detection, which effectively bypass the need for defective data and issues about class imbalance.\nDefect/Material characterisation Characterising defects or material properties involves the prediction of numerical variables - e.g. defect size or remaining wall thickness. In ultrasonic imaging, this has been typically addressed through clipping methods (e.g. -6dB method) with the hope that it would help determine an accurate estimate of the defect size. However, these methods are conservative and not very accurate.\nNeural networks provide an excellent alternative that produces numerical predictions from complex, structured or unstructured data. For example, predicting crack length and orientation from half-skip ultrasonic images [4] or estimating minimum wall thickness in heavily corroded materials [5]. Comparing against traditional methods to do this, the data-driven approaches easily improves their accuracy.\nCNN architecture for wall thickness prediction [5].\rHowever, issues w.r.t. the training data, uncertainty quantification and domain adaptation (when numerical data is required to train but the model is applied in experimental data) are still being explored to further improve these models. More remarkably, explainable AI can provide very useful information to determine the right network architecture to improve these models.\nResearch work The work in this area is nowadays focused on explanability and how that can help inform about (1) the behaviour of deep learning models for specific applications and (2) the optimal model structure through a human-interpretable and reasoned approach without having to do trial and errors. Further improvements in the artefact suppression and new ways of addressing the detection (and its performance evaluation through e.g. ROC curves) are also under consideration.\nReferences Cantero-Chinchilla, S., Wilcox, P.D. and Croxford, A.J., 2022. Deep learning in automated ultrasonic NDE–developments, axioms and opportunities. NDT \u0026 E International, 131, p.102703. Cantero-Chinchilla, S., Wilcox, P.D. and Croxford, A.J., 2022. A deep learning based methodology for artefact identification and suppression with application to ultrasonic images. NDT \u0026 E International, 126, p.102575. Cantero-Chinchilla, S., Croxford, A.J. and Wilcox, P.D., 2023. A data-driven approach to suppress artefacts using PCA and autoencoders. NDT \u0026 E International, 139, p.102904. Pyle, R.J., Bevan, R.L., Hughes, R.R., Rachev, R.K., Ali, A.A.S. and Wilcox, P.D., 2020. Deep learning for ultrasonic crack characterization in NDE. IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control, 68(5), pp.1854-1865. Cantero-Chinchilla, S., Simpson, C.A., Ballisat, A., Croxford, A.J. and Wilcox, P.D., 2023. Convolutional neural networks for ultrasound corrosion profile time series regression. NDT \u0026 E International, 133, p.102756. ",
+  "wordCount" : "908",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Sergio Cantero Chinchilla"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://scanteroch.github.io/research/ds_nde/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sergio Cantero Chinchilla",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://scanteroch.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://scanteroch.github.io/" accesskey="h" title="Sergio Cantero Chinchilla (Alt + H)">Sergio Cantero Chinchilla</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://scanteroch.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://scanteroch.github.io/research/" title="Research">
+                    <span>Research</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://scanteroch.github.io/people/" title="People">
+                    <span>People</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://scanteroch.github.io/collaborators/" title="Collaborators">
+                    <span>Collaborators</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://scanteroch.github.io/jobs/" title="Jobs &amp; Opportunities">
+                    <span>Jobs &amp; Opportunities</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://scanteroch.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://scanteroch.github.io/research/">Data-Driven Engineering lab - Research</a></div>
+    <h1 class="post-title">
+      Data Science for NDE
+    </h1>
+    <div class="post-meta">5 min&nbsp;·&nbsp;Sergio Cantero Chinchilla&nbsp;|&nbsp;<a href="https://github.com/scanteroch/scanteroch.github.io/scanteroch/content/research/DS_NDE.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#data-pre-processing" aria-label="Data pre-processing">Data pre-processing</a></li>
+                <li>
+                    <a href="#defect-detection" aria-label="Defect detection">Defect detection</a></li>
+                <li>
+                    <a href="#defectmaterial-characterisation" aria-label="Defect/Material characterisation">Defect/Material characterisation</a></li>
+                <li>
+                    <a href="#research-work" aria-label="Research work">Research work</a></li>
+                <li>
+                    <a href="#references" aria-label="References">References</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h1>
+<p>Automation of non-destructive evaluation (NDE) processes has typically relied on rudimentary tools that support a trained operator manually interpreting data. The abundance of data and implementation of Internet of Things and Industry 4.0 provide a new exciting opportunity to extract more accurate information in a more efficient manner - hence, enabling automation. A general framework for the automation in ultrasonic NDE enabled by deep learning is provided below.</p>
+<figure>
+<img src="../media/LevelsDiagram1.jpg" alt="Automation levels in ultrasonic NDE" style="width:500px;"/>
+<figcaption>Automation levels for ultrasonic NDE [1].</figcaption>
+</figure>
+<p>This research line explores data science and artificial intelligence/machine learning techniques for the automation of NDE processes, including data pre-processing, defect detection, and defect or material characterisation.</p>
+<h1 id="data-pre-processing">Data pre-processing<a hidden class="anchor" aria-hidden="true" href="#data-pre-processing">#</a></h1>
+<p>NDE data are typically noisy and contain elements that may obscure defective information. In the case of ultrasonic NDE, this can be realised in the form of <em>artefacts</em> - benign feature that appear in images (ultrasonic imaging) potentially obscuring defects.
+I have addressed this problem from a data-driven perspective, i.e. using datasets to build a model that can suppress the artefacts, ideally in the time-domain, before going to the image domain (as in the latter, preserving information from a pixel area is much more difficult).</p>
+<p>To tackle this issue, I have proposed two methods [2,3] based on the concepts of autoencoders and PCA, which use either numerical or experimental data in order to learn the artefact representation in the time domain and suppress them. In [2], the suppression was addressed by blanking out some parts of the ultrasonic signals, while in [3] a subtraction was proposed. The benefit of [2] is an enhanced removal of artefacts but at the cost of removing defect-related energy and distorting the spread function. In [3], these limitations where addressed, showing a more realistic spread function of the defects while having a very limited impact in the level of artefact suppression.</p>
+<figure>
+<img src="../media/Art_Supp.jpg" alt="Artefact suppression" style="width:500px;"/>
+<figcaption>Artefact suppression example (Figure taken from [3]). First column is the raw image without suppression, second column is the PCA-AE from [3] compared against the GB-AE autoencoder in [2] and the original defect.</figcaption>
+</figure>
+<p>The overall limitations rely on the simplistic inspection configuration considering flat specimens and artefacts stemming from back- and front-walls. These are aspects that are considered to have an implication in the design of the data-driven models, and that are under research consideration.</p>
+<h1 id="defect-detection">Defect detection<a hidden class="anchor" aria-hidden="true" href="#defect-detection">#</a></h1>
+<p>This NDE stage involves the binary classification of a set of data in either defective or pristine material. In ultrasonic imaging, this is typically done by setting a threshold value (based on defect-free data) and identifying any amplitude above the threshold. The approaches from data pre-processing can be seen as an attempt to improve the performance of classical detectors.</p>
+<p>Deep learning offers the possibility to detect defects from images by visually inspecting an image and tracing boxes whereby a defect is believed to be seen (e.g. through CNNs). Binary classifiers can also be created to provide information about the defect information in a piece of NDE data. However, the main issue with these approaches is the reliance on defect data, which are usually scarce in nature in NDE. Alternatives could include unsupervised approaches for anomaly detection, which effectively bypass the need for defective data and issues about class imbalance.</p>
+<h1 id="defectmaterial-characterisation">Defect/Material characterisation<a hidden class="anchor" aria-hidden="true" href="#defectmaterial-characterisation">#</a></h1>
+<p>Characterising defects or material properties involves the prediction of numerical variables - e.g. defect size or remaining wall thickness. In ultrasonic imaging, this has been typically addressed through clipping methods (e.g. -6dB method) with the hope that it would help determine an accurate estimate of the defect size. However, these methods are conservative and not very accurate.</p>
+<p>Neural networks provide an excellent alternative that produces numerical predictions from complex, structured or unstructured data. For example, predicting crack length and orientation from half-skip ultrasonic images [4] or estimating minimum wall thickness in heavily corroded materials [5]. Comparing against traditional methods to do this, the data-driven approaches easily improves their accuracy.</p>
+<figure>
+<img src="../media/CNN_Corrosion.jpg" alt="CNN architecture for wall thickness prediction" style="width:500px;"/>
+<figcaption>CNN architecture for wall thickness prediction [5].</figcaption>
+</figure>
+<p>However, issues w.r.t. the training data, uncertainty quantification and domain adaptation (when numerical data is required to train but the model is applied in experimental data) are still being explored to further improve these models. More remarkably, explainable AI can provide very useful information to determine the right network architecture to improve these models.</p>
+<h1 id="research-work">Research work<a hidden class="anchor" aria-hidden="true" href="#research-work">#</a></h1>
+<p>The work in this area is nowadays focused on <strong>explanability</strong> and how that can help inform about (1) the behaviour of deep learning models for specific applications and (2) the optimal model structure through a human-interpretable and reasoned approach without having to do trial and errors. Further improvements in the artefact suppression and new ways of addressing the detection (and its performance evaluation through e.g. ROC curves) are also under consideration.</p>
+<h1 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h1>
+<ol>
+<li>Cantero-Chinchilla, S., Wilcox, P.D. and Croxford, A.J., 2022. Deep learning in automated ultrasonic NDE–developments, axioms and opportunities. <em>NDT &amp; E International</em>, 131, p.102703.</li>
+<li>Cantero-Chinchilla, S., Wilcox, P.D. and Croxford, A.J., 2022. A deep learning based methodology for artefact identification and suppression with application to ultrasonic images. <em>NDT &amp; E International</em>, 126, p.102575.</li>
+<li>Cantero-Chinchilla, S., Croxford, A.J. and Wilcox, P.D., 2023. A data-driven approach to suppress artefacts using PCA and autoencoders. <em>NDT &amp; E International</em>, 139, p.102904.</li>
+<li>Pyle, R.J., Bevan, R.L., Hughes, R.R., Rachev, R.K., Ali, A.A.S. and Wilcox, P.D., 2020. Deep learning for ultrasonic crack characterization in NDE. <em>IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control</em>, 68(5), pp.1854-1865.</li>
+<li>Cantero-Chinchilla, S., Simpson, C.A., Ballisat, A., Croxford, A.J. and Wilcox, P.D., 2023. Convolutional neural networks for ultrasound corrosion profile time series regression. <em>NDT &amp; E International</em>, 133, p.102756.</li>
+</ol>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://scanteroch.github.io/research/uq_dl/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Uncertainty quantification in deep learning methods</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://scanteroch.github.io/">Sergio Cantero Chinchilla</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

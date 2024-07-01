@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Probabilistic SHM | Sergio Cantero Chinchilla</title>
 <meta name="keywords" content="">
-<meta name="description" content="Under construction&hellip;">
+<meta name="description" content="Introduction Structural health monitoring (SHM) usually encompasses the different stages that form a monitoring strategy, namely continuous monitoring, damage detection, damage localisation and characterisation. SHM also arguably addresses the prediction of the remaining useful life of a structure, which is part of what is known as Prognostics and Health Management given that it involves maintenance policy about when to carry out inspections or replace a part based on the actual condition of the structure (or condition-based maintenance).">
 <meta name="author" content="Sergio Cantero Chinchilla">
 <link rel="canonical" href="http://localhost:1313/research/uq_shm/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.4485b763977cc3e4662eef6f989e7545db37d8db129ceec3fad44406a8b41456.css" integrity="sha256-RIW3Y5d8w&#43;RmLu9vmJ51Rds32NsSnO7D&#43;tREBqi0FFY=" rel="preload stylesheet" as="style">
@@ -56,7 +56,7 @@
 
     </style>
 </noscript><meta property="og:title" content="Probabilistic SHM" />
-<meta property="og:description" content="Under construction&hellip;" />
+<meta property="og:description" content="Introduction Structural health monitoring (SHM) usually encompasses the different stages that form a monitoring strategy, namely continuous monitoring, damage detection, damage localisation and characterisation. SHM also arguably addresses the prediction of the remaining useful life of a structure, which is part of what is known as Prognostics and Health Management given that it involves maintenance policy about when to carry out inspections or replace a part based on the actual condition of the structure (or condition-based maintenance)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/research/uq_shm/" /><meta property="og:image" content="http://localhost:1313/papermod-cover.png"/><meta property="article:section" content="research" />
 
@@ -66,7 +66,7 @@
 <meta name="twitter:image" content="http://localhost:1313/papermod-cover.png"/>
 
 <meta name="twitter:title" content="Probabilistic SHM"/>
-<meta name="twitter:description" content="Under construction&hellip;"/>
+<meta name="twitter:description" content="Introduction Structural health monitoring (SHM) usually encompasses the different stages that form a monitoring strategy, namely continuous monitoring, damage detection, damage localisation and characterisation. SHM also arguably addresses the prediction of the remaining useful life of a structure, which is part of what is known as Prognostics and Health Management given that it involves maintenance policy about when to carry out inspections or replace a part based on the actual condition of the structure (or condition-based maintenance)."/>
 
 
 <script type="application/ld+json">
@@ -95,12 +95,12 @@
   "@type": "BlogPosting",
   "headline": "Probabilistic SHM",
   "name": "Probabilistic SHM",
-  "description": "Under construction\u0026hellip;",
+  "description": "Introduction Structural health monitoring (SHM) usually encompasses the different stages that form a monitoring strategy, namely continuous monitoring, damage detection, damage localisation and characterisation. SHM also arguably addresses the prediction of the remaining useful life of a structure, which is part of what is known as Prognostics and Health Management given that it involves maintenance policy about when to carry out inspections or replace a part based on the actual condition of the structure (or condition-based maintenance).",
   "keywords": [
     
   ],
-  "articleBody": "Under construction…\n",
-  "wordCount" : "2",
+  "articleBody": "Introduction Structural health monitoring (SHM) usually encompasses the different stages that form a monitoring strategy, namely continuous monitoring, damage detection, damage localisation and characterisation. SHM also arguably addresses the prediction of the remaining useful life of a structure, which is part of what is known as Prognostics and Health Management given that it involves maintenance policy about when to carry out inspections or replace a part based on the actual condition of the structure (or condition-based maintenance). The fundamental difference with respect to NDE is that SHM is performed continuously in time - i.e. there is a continuous monitoring of the structural health state.\nIn the condition-based maintenance paradigm, the quantification of uncertainties is crucial in order to make informed decisions based on probabilities. In this research line, I have developed Bayesian probabilistic methods to address all the stages of SHM. Furthermore, SHM can be carried out using a variety of testing techniques such as vibration methods, visual inspection methods or ultrasonic testing. The latter is particularly interesting for industries with high-value structures with thin-like structures such as the aerospace industries. Most of my work in this area is generic and transferrable to any other testing technique, but has been proved on ultrasonic guided-waves or through-transmission ultrasound - given its weight lightness, penetration power, low attenuation and cheap implementation costs.\nDamage detection This is probably the most important of all the SHM stages. Reliably and efficiently detecting incipient forms of damage is crucial to ensure safe operation of any engineering asset. Making a prompt decision about an indication of a defect is crucial and hard to perform on complex data such as guided waves. The approach I developed in this area [1] accounts for significant differences in the shape of guided-waves as a result of any external interaction with the structure. It uses fuzzy logic principles to provide information about the peaks of a signal being shifted by applying a probability density function like fuzzy set to each signal peak. This technique in itself may be prone to false negatives, but the potential lies in the use of massive sets of signals coming from different test configurations such as physical beamforming or full matrix capture. Moreover, one can use statistics to track the degradation of a structure and construct a degree of health indicator which can match the damage in itself as demonstrated in a fatigue test and shown in the figure below.\nDegree of Health (DoH) comparison against crack length in a fatigue test of an aluminium plate [1].\rDamage localisation Once damage is detected, the next stage in the SHM process is to locate it and isolate it in order to make decisions - e.g. if it falls within a safety-critical area, the part can be replaced without further investigation. Nonetheless, accounting for uncertainties in the process of signal processing is important given the differences in applying these techniques. For example, if a baseline extraction method is being applied, usually the arrival time of the first wave packet in the guided wave is extracted to tract the arrival time. An ellipse-based geometrical model can then be used to extract the damage location. The processing approach to extract the arrival time, e.g. through time-frequency transforms, inevitably introduces epistemic uncertainties stemming from mathematical assumptions when building such techniques. These uncertainties can be systematically accounted for when inferring the damage location. In fact, if the uncertainties of all processing models are added, one can make a hyper-robust estimation of the damage location, accounting for multiple uncertainties. This leads to more accurate and complete identification of damage locations as shown below in comparison with a deterministic optimisation method (genetic algorithms (GA)).\nComparison between a deterministic damage localization using GA (grey point) and the results obtained with the Bayesian approach [2].\rI have developed other Bayesian approaches for localising damage based on physics-based guided wave propagation models and others for resonant metamaterial beams, which you can check in my Scholar.\nDamage characterisation The next stage in the SHM ladder is to characterise the defect severity. This is usually through characterising the shape and type (e.g. crack of 3mm). To tackle this problem, I have developed multiple multilevel Bayesian approaches whereby the damage is quantified (e.g. Young’s modulus reduction) and characterised (e.g. how many layers in a composite layup are damaged). Depending on the nature of the problem, the problem of characterising the type of damage can be computationally expensive if many options can be considered; hence, computational strategies that avoid the calculation of every combination in a full-grid search are considered, such as greedy algorithms whereby only one entity (damage mode, sensor location, etc.) is considered at a time. This was proven computationally efficient when performing damage characterisation in post-impact fatigue composite specimens, whereby the damage pattern can be formed of any combination of layer and interface in the specimen.\nBayesian IP framework at the three hierarchical levels [3].\rThe multilevel Bayesian approach for inverse problems is a very powerful technique for inferring damage characteristics as long as a damage model is available that is not computationally very heavy to compute. This would require the use of a data-driven surrogate model and/or the use of approximate Bayesian methods to reduce the usage of the physics model itself. I have worked in multiple characterisation approaches in the context of probabilistic SHM, which you can check in my Scholar.\nResearch work The work in this area is nowadays driven by the integration of neural networks in the inverse problem - e.g. surrogate models of the physics models and surrogating the entire inversion process. Currently I am open to the development of any Bayesian methods that advance the state of the art through the use of scientific machine learning, surrogate models and neural networks. In addition, I am also currently working on extending the characterisation stage to the prognostics one, whereby the end-of-life of a structure can be predicted using degradation models. If you want to collaborate in any of these areas, do not hesitate to contact me.\nReferences Cantero-Chinchilla, S., Aranguren, G., Royo, J.M., Chiachío, M., Etxaniz, J. and Calvo-Echenique, A., 2021. Structural health monitoring using ultrasonic guided-waves and the degree of health index. Sensors, 21(3), p.993. Cantero-Chinchilla, S., Chiachío, J., Chiachío, M., Chronopoulos, D. and Jones, A., 2019. A robust Bayesian methodology for damage localization in plate-like structures using ultrasonic guided-waves. Mechanical Systems and Signal Processing, 122, pp.192-205. Chiachío, J., Bochud, N., Chiachío, M., Cantero, S. and Rus, G., 2017. A multilevel Bayesian method for ultrasound-based damage identification in composite laminates. Mechanical Systems and Signal Processing, 88, pp.462-477. ",
+  "wordCount" : "1094",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -202,12 +202,65 @@
     <h1 class="post-title">
       Probabilistic SHM
     </h1>
-    <div class="post-meta">1 min&nbsp;·&nbsp;Sergio Cantero Chinchilla&nbsp;|&nbsp;<a href="https://github.com/scanteroch/scanteroch.github.io/scanteroch/content/research/UQ_SHM.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+    <div class="post-meta">6 min&nbsp;·&nbsp;Sergio Cantero Chinchilla&nbsp;|&nbsp;<a href="https://github.com/scanteroch/scanteroch.github.io/scanteroch/content/research/UQ_SHM.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
 
 </div>
-  </header> 
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
 
-  <div class="post-content"><p>Under construction&hellip;</p>
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#damage-detection" aria-label="Damage detection">Damage detection</a></li>
+                <li>
+                    <a href="#damage-localisation" aria-label="Damage localisation">Damage localisation</a></li>
+                <li>
+                    <a href="#damage-characterisation" aria-label="Damage characterisation">Damage characterisation</a></li>
+                <li>
+                    <a href="#research-work" aria-label="Research work">Research work</a></li>
+                <li>
+                    <a href="#references" aria-label="References">References</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h1>
+<p>Structural health monitoring (SHM) usually encompasses the different stages that form a monitoring strategy, namely continuous monitoring, damage detection, damage localisation and characterisation. SHM also arguably addresses the prediction of the remaining useful life of a structure, which is part of what is known as Prognostics and Health Management given that it involves maintenance policy about when to carry out inspections or replace a part based on the actual condition of the structure (or condition-based maintenance). The fundamental difference with respect to NDE is that SHM is performed continuously in time - i.e. there is a continuous monitoring of the structural health state.</p>
+<p>In the condition-based maintenance paradigm, the quantification of uncertainties is crucial in order to make informed decisions based on probabilities. In this research line, I have developed Bayesian probabilistic methods to address all the stages of SHM. Furthermore, SHM can be carried out using a variety of testing techniques such as vibration methods, visual inspection methods or ultrasonic testing. The latter is particularly interesting for industries with high-value structures with thin-like structures such as the aerospace industries. Most of my work in this area is generic and transferrable to any other testing technique, but has been proved on ultrasonic guided-waves or through-transmission ultrasound - given its weight lightness, penetration power, low attenuation and cheap implementation costs.</p>
+<h1 id="damage-detection">Damage detection<a hidden class="anchor" aria-hidden="true" href="#damage-detection">#</a></h1>
+<p>This is probably the most important of all the SHM stages. Reliably and efficiently detecting incipient forms of damage is crucial to ensure safe operation of any engineering asset. Making a prompt decision about an indication of a defect is crucial and hard to perform on complex data such as guided waves. The approach I developed in this area [1] accounts for significant differences in the shape of guided-waves as a result of any external interaction with the structure. It uses fuzzy logic principles to provide information about the peaks of a signal being shifted by applying a probability density function like fuzzy set to each signal peak. This technique in itself may be prone to false negatives, but the potential lies in the use of massive sets of signals coming from different test configurations such as physical beamforming or full matrix capture. Moreover, one can use statistics to track the degradation of a structure and construct a degree of health indicator which can match the damage in itself as demonstrated in a fatigue test and shown in the figure below.</p>
+<figure>
+<img src="../media/DoH.png" alt="Degree of Health (DoH) comparison against crack length." style="width:500px;"/>
+<figcaption>Degree of Health (DoH) comparison against crack length in a fatigue test of an aluminium plate [1].</figcaption>
+</figure>
+<h1 id="damage-localisation">Damage localisation<a hidden class="anchor" aria-hidden="true" href="#damage-localisation">#</a></h1>
+<p>Once damage is detected, the next stage in the SHM process is to locate it and isolate it in order to make decisions - e.g. if it falls within a safety-critical area, the part can be replaced without further investigation. Nonetheless, accounting for uncertainties in the process of signal processing is important given the differences in applying these techniques. For example, if a baseline extraction method is being applied, usually the arrival time of the first wave packet in the guided wave is extracted to tract the arrival time. An ellipse-based geometrical model can then be used to extract the damage location. The processing approach to extract the arrival time, e.g. through time-frequency transforms, inevitably introduces epistemic uncertainties stemming from mathematical assumptions when building such techniques. These uncertainties can be systematically accounted for when inferring the damage location. In fact, if the uncertainties of all processing models are added, one can make a hyper-robust estimation of the damage location, accounting for multiple uncertainties. This leads to more accurate and complete identification of damage locations as shown below in comparison with a deterministic optimisation method (genetic algorithms (GA)).</p>
+<figure>
+<img src="../media/localisation.jpg" alt="Comparison between deterministic and Bayesian approaches" style="width:500px;"/>
+<figcaption>Comparison between a deterministic damage localization using GA (grey point) and the results obtained with the Bayesian approach [2].</figcaption>
+</figure>
+<p>I have developed other Bayesian approaches for localising damage based on physics-based guided wave propagation models and others for resonant metamaterial beams, which you can check in my <a href="https://scholar.google.com/citations?user=UzQ8jtwAAAAJ&hl=en">Scholar</a>.</p>
+<h1 id="damage-characterisation">Damage characterisation<a hidden class="anchor" aria-hidden="true" href="#damage-characterisation">#</a></h1>
+<p>The next stage in the SHM ladder is to characterise the defect severity. This is usually through characterising the shape and type (e.g. crack of 3mm). To tackle this problem, I have developed multiple multilevel Bayesian approaches whereby the damage is quantified (e.g. Young&rsquo;s modulus reduction) and characterised (e.g. how many layers in a composite layup are damaged). Depending on the nature of the problem, the problem of characterising the type of damage can be computationally expensive if many options can be considered; hence, computational strategies that avoid the calculation of every combination in a full-grid search are considered, such as greedy algorithms whereby only one entity (damage mode, sensor location, etc.) is considered at a time. This was proven computationally efficient when performing damage characterisation in post-impact fatigue composite specimens, whereby the damage pattern can be formed of any combination of layer and interface in the specimen.</p>
+<figure>
+<img src="../media/Bayesian.jpg" alt=" Bayesian IP framework at the three hierarchical levels" style="width:500px;"/>
+<figcaption>Bayesian IP framework at the three hierarchical levels [3].</figcaption>
+</figure>
+<p>The multilevel Bayesian approach for inverse problems is a very powerful technique for inferring damage characteristics as long as a damage model is available that is not computationally very heavy to compute. This would require the use of a data-driven surrogate model and/or the use of approximate Bayesian methods to reduce the usage of the physics model itself. I have worked in multiple characterisation approaches in the context of probabilistic SHM, which you can check in my <a href="https://scholar.google.com/citations?user=UzQ8jtwAAAAJ&hl=en">Scholar</a>.</p>
+<h1 id="research-work">Research work<a hidden class="anchor" aria-hidden="true" href="#research-work">#</a></h1>
+<p>The work in this area is nowadays driven by the integration of neural networks in the inverse problem - e.g. surrogate models of the physics models and surrogating the entire inversion process. Currently I am open to the development of any Bayesian methods that advance the state of the art through the use of scientific machine learning, surrogate models and neural networks. In addition, I am also currently working on extending the characterisation stage to the prognostics one, whereby the end-of-life of a structure can be predicted using degradation models. If you want to collaborate in any of these areas, do not hesitate to contact me.</p>
+<h1 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h1>
+<ol>
+<li>Cantero-Chinchilla, S., Aranguren, G., Royo, J.M., Chiachío, M., Etxaniz, J. and Calvo-Echenique, A., 2021. Structural health monitoring using ultrasonic guided-waves and the degree of health index. <em>Sensors</em>, 21(3), p.993.</li>
+<li>Cantero-Chinchilla, S., Chiachío, J., Chiachío, M., Chronopoulos, D. and Jones, A., 2019. A robust Bayesian methodology for damage localization in plate-like structures using ultrasonic guided-waves. <em>Mechanical Systems and Signal Processing</em>, 122, pp.192-205.</li>
+<li>Chiachío, J., Bochud, N., Chiachío, M., Cantero, S. and Rus, G., 2017. A multilevel Bayesian method for ultrasound-based damage identification in composite laminates. <em>Mechanical Systems and Signal Processing</em>, 88, pp.462-477.</li>
+</ol>
 
 
   </div>

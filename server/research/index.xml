@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Data-Driven Engineering lab - Research on Sergio Cantero Chinchilla</title>
-    <link>http://localhost:1313/research/</link>
+    <link>https://scanteroch.github.io/research/</link>
     <description>Recent content in Data-Driven Engineering lab - Research on Sergio Cantero Chinchilla</description>
     <image>
       <title>Sergio Cantero Chinchilla</title>
-      <url>http://localhost:1313/papermod-cover.png</url>
-      <link>http://localhost:1313/papermod-cover.png</link>
+      <url>https://scanteroch.github.io/papermod-cover.png</url>
+      <link>https://scanteroch.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://localhost:1313/research/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://scanteroch.github.io/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Science for NDE</title>
-      <link>http://localhost:1313/research/ds_nde/</link>
+      <link>https://scanteroch.github.io/research/ds_nde/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/research/ds_nde/</guid>
+      <guid>https://scanteroch.github.io/research/ds_nde/</guid>
       <description>Introduction Automation of non-destructive evaluation (NDE) processes has typically relied on rudimentary tools that support a trained operator manually interpreting data. The abundance of data and implementation of Internet of Things and Industry 4.0 provide a new exciting opportunity to extract more accurate information in a more efficient manner - hence, enabling automation. A general framework for the automation in ultrasonic NDE enabled by deep learning is provided below.
 Automation levels for ultrasonic NDE [1].</description>
     </item>
     
     <item>
       <title>Uncertainty quantification in deep learning methods</title>
-      <link>http://localhost:1313/research/uq_dl/</link>
+      <link>https://scanteroch.github.io/research/uq_dl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/research/uq_dl/</guid>
+      <guid>https://scanteroch.github.io/research/uq_dl/</guid>
       <description>Introduction Deep learning methods can be highly accurate and efficient, but that comes at a cost. Typically, the generalisability of the methods is compromised outside the range of parameters in which they have been trained on. As an example of this, if a network is trained to predict thickness values between 7mm and 12mm, outside of this range the network output is not necessarily very accurate.
 Uncertainty quantification methods in deep learning help:</description>
     </item>
     
     <item>
       <title>Adaptive Laser-Induced Phased Array inspections</title>
-      <link>http://localhost:1313/research/alipa/</link>
+      <link>https://scanteroch.github.io/research/alipa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/research/alipa/</guid>
+      <guid>https://scanteroch.github.io/research/alipa/</guid>
       <description>Introduction Ultrasonic array inspections are usually impractical in highly hazardous environments where a trained operator cannot access physically to ensure good coupling and data are being acquired. Similarly, classical arrays need to find alternative coupling approaches when the geometry of the inspected specimen is irregular. Laser-induced phased-arrays (LIPAs) overcome these issues as it is a non-contact NDT technique that enable ultrasonic imaging in a similar fashion as classical phased-arrays [1].</description>
     </item>
     
     <item>
       <title>Probabilistic SHM</title>
-      <link>http://localhost:1313/research/uq_shm/</link>
+      <link>https://scanteroch.github.io/research/uq_shm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/research/uq_shm/</guid>
-      <description>Introduction Structural health monitoring (SHM) usually encompasses the different stages that form a monitoring strategy, namely continuous monitoring, damage detection, damage localisation and characterisation. SHM also arguably addresses the prediction of the remaining useful life of a structure, which is part of what is known as Prognostics and Health Management given that it involves maintenance policy about when to carry out inspections or replace a part based on the actual condition of the structure (or condition-based maintenance).</description>
+      <guid>https://scanteroch.github.io/research/uq_shm/</guid>
+      <description>Under construction&amp;hellip;</description>
     </item>
     
     <item>
       <title>Optimal sensor placement</title>
-      <link>http://localhost:1313/research/osp/</link>
+      <link>https://scanteroch.github.io/research/osp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/research/osp/</guid>
+      <guid>https://scanteroch.github.io/research/osp/</guid>
       <description>Introduction This research line focuses on the optimisation of sensor location for a given objective, which might be defect detection, damage localisation, or characterisation. In particular, I am interested in incorporating uncertainty quantification along the way to obtain the most robust locations that can manage some level of noise. This problem not only need to provide the most informative locations but also the optimal number of sensors, which introduces an economic problem such that when adding more sensors, more hardware, software and data management costs are added.</description>
     </item>
     
