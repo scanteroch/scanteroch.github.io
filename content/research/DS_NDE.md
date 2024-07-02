@@ -37,7 +37,7 @@ Characterising defects or material properties involves the prediction of numeric
 Neural networks provide an excellent alternative that produces numerical predictions from complex, structured or unstructured data. For example, predicting crack length and orientation from half-skip ultrasonic images [4] or estimating minimum wall thickness in heavily corroded materials [5]. Comparing against traditional methods to do this, the data-driven approaches easily improves their accuracy.
 
 <figure>
-<img src="../media/CNN_Corrosion.jpg" alt="CNN architecture for wall thickness prediction" style="width:500px;"/>
+<img src="../media/CNN_corrosion.jpg" alt="CNN architecture for wall thickness prediction" style="width:500px;"/>
 <figcaption>CNN architecture for wall thickness prediction [5].</figcaption>
 </figure>
 
